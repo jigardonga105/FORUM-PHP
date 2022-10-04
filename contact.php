@@ -10,6 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <title>FORUM - let's discuss</title>
     <style>
     .nav {
@@ -27,12 +32,28 @@
         box-shadow: 5px 5px 8px 10px rgb(163, 157, 157);
         filter: brightness(95%);
     }
+
     .grid:hover {
         margin-left: 35%;
         margin-right: 35%;
         margin-top: 5em;
         box-shadow: 5px 5px 8px 10px rgb(163, 157, 157);
         filter: brightness(100%);
+    }
+
+    .contactUsDiv {
+        border: 1px solid black;
+        border-radius: 8px;
+        margin: 5% 30%;
+    }
+
+    .head {
+        background-color: orange;
+        margin-left: 30%;
+        font-size: 45px;
+        border-radius: 5px;
+        padding: 0px 5px;
+        padding-bottom: 5px;
     }
     </style>
 </head>
@@ -45,7 +66,8 @@
         <?php
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {
-        echo '<div class="container">
+        echo '<div class="container contactUsDiv">
+                    <span class="head">Contact Us:</span>
                     <form action="/forum/partials/_handlecontactus.php" method="post">
                         <div class="mb-3 mt-5">
                             <label for="exampleInputPassword1" class="form-label">First Name</label>
@@ -69,7 +91,7 @@
                             <textarea type="text" class="form-control" id="concern" placeholder="Your message"
                                 name="concern"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-warning mb-3">Submit</button>
+                        <button type="submit" class="btn btn-warning mb-3" style="margin-left: 45%;">Submit</button>
                     </form>
             </div>';
     }

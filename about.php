@@ -10,6 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <title>FORUM - let's discuss</title>
 
     <style>
@@ -21,7 +26,7 @@
     }
 
     .clr {
-        background-color: rgba(255,255,255);
+        background-color: rgba(255, 255, 255);
     }
 
     .nav {
@@ -90,7 +95,7 @@
 
             <div class="alert alert-info text-dark mission2-div" role="alert">
                 <h1 align="center">Our Goal</h1>
-                <p align="center">Founded in 2020, <strong>FORUM's</strong> public platform is used by nearly everyone
+                <p align="center">Founded in 2022, <strong>FORUM's</strong> public platform is used by nearly everyone
                     who codes to
                     learn, share their knowledge, collaborate, and build their careers.Our products and tools help
                     developers and technologists in life and at work. These products also include FORUM Advertising. our
@@ -107,7 +112,8 @@
                         <span style="font-size:18px">Where developers and<br>technologists go to gain and
                             share<br>knowledge.</span>
                         <div>
-                            <a href="/forum/allquestion.php"><button class="btn btn-outline-warning mt-3 bg-info text-dark">Check Out</button></a>
+                            <a href="/forum/allquestion.php"><button
+                                    class="btn btn-outline-warning mt-3 bg-info text-dark">Check Out</button></a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +123,8 @@
                         <span style="font-size:30px">Our Users<br></span>
                         <span style="font-size:18px">Where developers and<br>technologists contact<br>personally.</span>
                         <div>
-                            <a href="/forum/users.php"><button class="btn btn-outline-warning mt-3 bg-info text-dark">Our Users</button></a>
+                            <a href="/forum/users.php"><button
+                                    class="btn btn-outline-warning mt-3 bg-info text-dark">Our Users</button></a>
                         </div>
                     </div>
                 </div>

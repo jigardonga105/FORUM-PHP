@@ -10,6 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <title>FORUM - let's discuss</title>
 
     <style>
@@ -68,6 +73,7 @@
         box-shadow: 5px 5px 8px 10px rgb(163, 157, 157);
         filter: brightness(95%);
     }
+
     .grid:hover {
         margin-left: 30%;
         margin-right: 30%;
@@ -83,6 +89,7 @@
         box-shadow: 5px 5px 8px 10px rgb(163, 157, 157);
         filter: brightness(95%);
     }
+
     .grid-1:hover {
         margin-left: 17%;
         margin-right: 51%;
@@ -98,6 +105,7 @@
         box-shadow: 5px 5px 8px 10px rgb(163, 157, 157);
         filter: brightness(95%);
     }
+
     .grid-2:hover {
         margin-left: 51%;
         margin-right: 17%;
@@ -114,6 +122,7 @@
         box-shadow: 5px 5px 8px 10px rgb(163, 157, 157);
         filter: brightness(95%);
     }
+
     .grid-3:hover {
         margin-left: 30%;
         margin-right: 30%;
@@ -122,9 +131,34 @@
         box-shadow: 5px 5px 8px 10px rgb(163, 157, 157);
         filter: brightness(100%);
     }
-    .grid-3_img{
-        margin-left:50%;
-        margin-right:50%;
+
+    .grid-3_img {
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+
+    .sideLeft {
+        float: left;
+        background-color: orange;
+        height: 242.5vh;
+        width: 130px;
+    }
+
+    .sideRight {
+        float: right;
+        background-color: orange;
+        height: 242.5vh;
+        width: 130px;
+    }
+
+    .developers {
+        font-size: 100px;
+        margin-left: 25%;
+    }
+
+    .community {
+        font-size: 100px;
+        margin-left: 25%;
     }
     </style>
 </head>
@@ -134,7 +168,7 @@
     <?php include 'partials/_header.php'; ?>
 
     <!-- Slider starts here -->
-    <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
@@ -142,13 +176,25 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://source.unsplash.com/2400x844/?coding,google" class="d-block w-100" alt="...">
+                <img src="img/crau1.jpg" class="d-block w-100" style="height: 700px; filter: blur(3px);" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <span style="font-size:100px; color:#ff8c00">FORUM</span>
+                    <h1>Ask your first question now!</h1>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/2400x844/?programmers,Microsoft" class="d-block w-100" alt="...">
+                <img src="img/crau2.jpg" class="d-block w-100" style="height: 700px; filter: blur(3px);" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <span style="font-size:100px; color:#ff8c00">FORUM</span>
+                    <h1>let's create a new community!</h1>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/2400x844/?coding,android" class="d-block w-100" alt="...">
+                <img src="img/crau3.jpg" class="d-block w-100" style="height: 700px; filter: blur(3px);" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <span style="font-size:100px; color:#ff8c00">FORUM</span>
+                    <h1>Solve other's problems and improve their knowledge!</h1>
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -162,61 +208,83 @@
     </div>
     <!-- Slider ends here -->
 
-    <!-- <div class="bg-clr"> -->
-    <!-- <div class="page-height"> -->
-    <div class="sld-text">
-        <h3 class="text-danger">Welcome to</h3>
-        <div class="text-secondary">
-            <span class="font-size mt-0">FORUM</span><br>
-            <span class="second-size">Let's Discuss</span>
+    <div class="">
+        <div class="sideLeft">
+            <p class="developers">D</p>
+            <p class="developers">E</p>
+            <p class="developers">V</p>
+            <p class="developers">E</p>
+            <p class="developers">L</p>
+            <p class="developers">O</p>
+            <p class="developers">P</p>
+            <p class="developers">E</p>
+            <p class="developers">R</p>
+            <p class="developers">S</p>
         </div>
-    </div>
-    <!-- </div> -->
+        <div class="sideRight">
+            <p class="community">C</p>
+            <p class="community">O</p>
+            <p class="community">M</p>
+            <p class="community">M</p>
+            <p class="community">U</p>
+            <p class="community">N</p>
+            <p class="community">I</p>
+            <p class="community">T</p>
+            <p class="community">Y</p>
+        </div>
+        <div class="sld-text">
+            <h3 class="text-danger">Welcome to</h3>
+            <div class="text-secondary">
+                <span class="font-size mt-0">FORUM</span><br>
+                <span class="second-size">Let's Discuss</span>
+            </div>
+        </div>
 
-    <div class="alert alert-info text-dark mb-5 grid" role="alert">
-        <h2 align="center" class="">For developers, by developers</h2>
-        <p align="center">FORUM - Let's Discuss' is an open community for anyone that codes. We help you get answers
-            to your toughest coding questions, share knowledge with your coworkers in private, and find your next
-            dream job.</p>
-    </div>
+        <div class="alert alert-info text-dark mb-5 grid" role="alert">
+            <h2 align="center" class="">For developers, by developers</h2>
+            <p align="center">FORUM - Let's Discuss' is an open community for anyone that codes. We help you get answers
+                to your toughest coding questions, share knowledge with your coworkers in private, and find your next
+                dream job.</p>
+        </div>
 
-    <div>
-        <div class="grid-1">
-            <div class="alert alert-info text-dark" role="alert">
-                <img align="right" class="mt-4" src="img/about2.jpg" width="155">
-                <span style="font-size:30px">Our Public Platform<br></span>
-                <span style="font-size:18px">Where developers and<br>technologists go to gain and
-                    share<br>knowledge.</span>
-                <div>
-                    <a href="/forum/allquestion.php"><button class="btn btn-outline-warning mt-3 bg-info text-dark">Check Out</button></a>
+        <div>
+            <div class="grid-1">
+                <div class="alert alert-info text-dark" role="alert">
+                    <img align="right" class="mt-4" src="img/about2.jpg" width="155">
+                    <span style="font-size:30px">Our Public Platform<br></span>
+                    <span style="font-size:18px">Where developers and<br>technologists go to gain and
+                        share<br>knowledge.</span>
+                    <div>
+                        <a href="/forum/allquestion.php"><button
+                                class="btn btn-outline-warning mt-3 bg-info text-dark">Check Out</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-2">
+                <div class="alert alert-info text-dark" role="alert">
+                    <img align="right" class="mt-2" src="img/user.jpg" width="155">
+                    <span style="font-size:30px">Our Users<br></span>
+                    <span style="font-size:18px">Where developers and<br>technologists contact<br>personally.</span>
+                    <div>
+                        <a href="/forum/users.php"><button class="btn btn-outline-warning mt-3 bg-info text-dark">Our
+                                Users</button></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="grid-2">
-            <div class="alert alert-info text-dark" role="alert">
-                <img align="right" class="mt-2" src="img/user.jpg" width="155">
-                <span style="font-size:30px">Our Users<br></span>
-                <span style="font-size:18px">Where developers and<br>technologists contact<br>personally.</span>
+
+        <div align="center" class="grid-3">
+            <div class="alert alert-info text-dark bg-warning" role="alert">
+                <span style="font-size:40px">Join Our Community<br></span>
+                <img class="mt-2" src="img/about3.jpg" width="500" height="200">
                 <div>
-                    <a href="/forum/users.php"><button class="btn btn-outline-warning mt-3 bg-info text-dark">Our
-                            Users</button></a>
+                    <button class="btn btn-outline-warning mt-3 bg-secondary text-warning" data-bs-toggle="modal"
+                        data-bs-target="#signupmodal">Create an Account</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div align="center" class="grid-3">
-        <div class="alert alert-info text-dark bg-warning" role="alert">
-            <span style="font-size:40px">Join Our Community<br></span>
-            <img class="mt-2" src="img/about3.jpg" width="500" height="200">
-            <div>
-                <button class="btn btn-outline-warning mt-3 bg-secondary text-warning" data-bs-toggle="modal" data-bs-target="#signupmodal">Create an Account</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- </div> -->
-    <!-- <a href="/forum/allquestion.php"><button class="btn btn-warning sld-text" type="submit">All Questions</button></a> -->
     <?php include 'partials/_footer.php'; ?>
 
     <!-- Optional JavaScript; choose one of the two! -->

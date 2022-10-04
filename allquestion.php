@@ -10,6 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <title>FORUM - let's discuss</title>
 
     <style>
@@ -35,7 +40,7 @@
     }
 
     .page-height {
-        min-height: 560px;
+        min-height: 516px;
         /* 575px */
     }
     </style>
@@ -48,7 +53,11 @@
     <div class="page-height">
         <div class="container mt-3 mb-5">
             <div class="mx-4">
-                <h3>All Questions:</h3>
+                <h3 class="text-warning">
+                    <i style="background-color: black; padding: 5px; border-radius: 5px; padding-top: 0px;">
+                        All Questions:
+                    </i>
+                </h3>
             </div>
         </div>
 
@@ -59,13 +68,15 @@
         $numRow = mysqli_num_rows($result);
         echo '<div class="container mt-3">
                 <div class="mx-5">
-                    <h5>'.$numRow.' Questions</h5>
+                    <h5>Total Questions: '.$numRow.'</h5>
                 </div>
-                <hr>
             </div>';
         
     ?>
-        <?php
+
+        <div class="allQuesDiv" style="border: 1px solid black;margin: 2% 14%; border-bottom: 0px solid white;">
+
+            <?php
     
             // $id = $_GET['catid'];
             $sql = "SELECT `thread_id`, `thread_title`, `thread_desc`,`thread_user_id`, `Date & Time` FROM `threads`"; 
@@ -84,22 +95,21 @@
                 $result2 = mysqli_query($conn, $sql2);
                 $row2 = mysqli_fetch_array($result2);
 
-                echo '<div class="container mt-2">
-                        <hr>
+                echo '<div class="container my-2" style="border-bottom: 1px solid black; padding-bottom: 5px;">
                         <div class="container">
                             <h5><a class="text-dark" href="thread.php?threadid='.$threadid.'">'.$threadtitle.'</a>
                             </h5>
                             <span class="mx-5">'.$threaddesc.'</span>
                         </div>
                         <div class="container" align="right">
-                            <span mr-5>'.$threadtime.'</span><br>
-                            <span><img class="mx-1 my-0" src="img/userdefault.jpg" width="54px" class="mx-1"></span>
+                            <span mr-5>'.$threadtime.'</span>
+                            <span><img class="mx-1 my-0" src="img/user.jpg" width="25px" class="mx-1" style="border-radius: 15px;"></span>
                             <span class="font-weight-bold my-0"><b>'. $row2['user_name'] .'</b></span><br>
-                            <span><b>'. $row2['user_email'] .'</b></span>
                         </div>
                     </div>';
             }
 
+            
             // echo var_dump($noresults);
 
             if ($noresults)
@@ -111,6 +121,7 @@
             }
 
         ?>
+        </div>
     </div>
     <?php include 'partials/_footer.php'; ?>
 

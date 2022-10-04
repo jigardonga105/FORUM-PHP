@@ -10,15 +10,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <title>FORUM - let's discuss</title>
 
     <style>
-        .user-grid{
-            margin-top: 5em;
-            margin-bottom: 5em;
-            margin-left: 40%;
-            margin-right: 40%;
-        }
+    .user-grid {
+        margin-top: 5em;
+        margin-bottom: 5em;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #efefef;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
     </style>
 </head>
 
@@ -27,9 +49,8 @@
 
     <?php echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.php">
-                <p class="text-warning my-0">FORUM</p>
-            </a>
+        <a href="home.php"><img src="img/favicon_io/Logo.png" alt="logo" width="55 px" height="50 px" style="margin-right:1px;"></img></a>
+        <a class="navbar-brand" href="home.php"><p class="text-warning my-0">ORUM</p></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -73,16 +94,34 @@
                 $useremail = $row['user_email'];
                 $userdate = $row['Date & Time'];
 
-                echo '<!-- use a for loop to itrate through the users -->
-                        <div class="col-md-4 my-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/user.jpg" height="210" width="500" class="card-img-top" alt="image of '.$username.'">
-                                <div class="card-body">
-                                    <h4 class="card-title text-warning" style="margin-left: 33%"><strong>'.$username.'</strong></h4>
-                                    <p class="card-text">Name: '.$username.'<br>Email-id : '.$useremail.'<br>DOJ : '.$userdate.'</p>
-                                </div>
+                if ($username != 'jigardonga@105FORUM') {
+
+                echo '<div class="col-md-4 my-4">
+                        <div class="card" style="width: 22rem;">
+                            <img src="img/user.jpg" class="card-img-top" alt="image of '.$username.'" style="width: 100px;
+                            height: 100px;
+                            border-radius: 70px;
+                            margin: 16% 35%;">
+                            <div class="card-body p-0">
+                                <table>
+                                    <tr>
+                                        <td><strong>Name:</strong></td>
+                                        <td>'.$username.'</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Email-id:</strong></td>
+                                        <td>'.$useremail.'</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>DOJ:</strong></td>
+                                        <td>'.$userdate.'</td>
+                                    </tr>
+                                </table>
                             </div>
-                        </div>';
+                        </div>
+                    </div>';
+
+                }
             }
         
         ?>

@@ -5,7 +5,8 @@ session_start();
 //navbar start here
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.php"><p class="text-warning my-0">FORUM</p></a>
+      <a href="home.php"><img src="img/favicon_io/Logo.png" alt="logo" width="55 px" height="50 px" style="margin-right:1px;"></img></a>
+        <a class="navbar-brand" href="home.php"><p class="text-warning my-0">ORUM</p></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -82,18 +83,16 @@ include 'partials/_signupmodal.php';
 if(isset($_GET['signupsuccess']) && $_GET['signupsuccess'] == 'true')
 {
   // this is for the success
-  echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
+  echo '<div id="alert-msg" class="alert alert-success alert-dismissible fade show my-0" role="alert">
           <strong>Success!</strong> You can now login.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
 }
       
 if(isset($_GET['signupunsuccess']) && $_GET['signupunsuccess'] == 'true')
 {
   // this is for the un success
-  echo '<div class="alert alert-danger alert-dismissible fade show my-0" role="alert">
+  echo '<div id="alert-msg" class="alert alert-danger alert-dismissible fade show my-0" role="alert">
           <strong>Error!</strong> Your Response has not been submitted successfully. Please check your details. then try again.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
 }
 
@@ -101,17 +100,15 @@ if(isset($_GET['signupunsuccess']) && $_GET['signupunsuccess'] == 'true')
 //This Message shown for login section
 if(isset($_GET['loginsuccess']) && $_GET['loginsuccess'] == 'true')
 {
-  echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
+  echo '<div id="alert-msg" class="alert alert-success alert-dismissible fade show my-0" role="alert">
           <strong>Success!</strong> You are logged in successfully.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
       }
       
 if(isset($_GET['loginunsuccess']) && $_GET['loginunsuccess'] == 'true')
 {
-  echo '<div class="alert alert-danger alert-dismissible fade show my-0" role="alert">
+  echo '<div id="alert-msg" class="alert alert-danger alert-dismissible fade show my-0" role="alert">
           <strong>Error!</strong> You are not logged in successfully. Please check your details. then try again.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
 }
 
@@ -119,17 +116,15 @@ if(isset($_GET['loginunsuccess']) && $_GET['loginunsuccess'] == 'true')
 //This Message shown for contact section
 if(isset($_GET['contactsuccess']) && $_GET['contactsuccess'] == 'true')
 {
-  echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
+  echo '<div id="alert-msg" class="alert alert-success alert-dismissible fade show my-0" role="alert">
       <strong>Success!</strong> Your response has been submitted successfully. We are contact you as soon as possible.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
 }
 
 if(isset($_GET['contactunsuccess']) && $_GET['contactunsuccess'] == 'true')
 {
-  echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
+  echo '<div id="alert-msg" class="alert alert-success alert-dismissible fade show my-0" role="alert">
           <strong>Error!</strong> Your response has not been submitted successfully. Please check your details and try again.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
 }
 
